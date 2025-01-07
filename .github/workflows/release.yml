@@ -49,7 +49,7 @@ jobs:
       - name: Build xcframework
         run: |
           cd box
-          go run ./cmd/internal/build_libbox -target apple -platform ios
+          go run ./cmd/internal/build_libbox -target ios
           zip -ry ./Libbox.xcframework.zip ./Libbox.xcframework
 
       - name: Detect checksum

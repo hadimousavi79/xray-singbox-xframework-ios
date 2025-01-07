@@ -42,7 +42,6 @@ jobs:
 
       - name: Setup Gomobile
         run: |
-          cd box
           make lib_install
           gomobile init
 

@@ -42,6 +42,7 @@ jobs:
 
       - name: Setup Gomobile
         run: |
+          cd box
           make lib_install
           gomobile init
 
@@ -49,6 +50,9 @@ jobs:
         run: |
           cd box
           go run ./cmd/internal/build_libbox -target ios
+          ls 
+          cd ..
+          ls
           zip -ry ./Libbox.xcframework.zip ./Libbox.xcframework
 
       - name: Detect checksum
